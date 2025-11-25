@@ -5,10 +5,11 @@
   "_component": "allow-scripts",
   "_classes": "",
   "_layout": "full",
-  "title": "Custom Script Execution",
-  "displayTitle": "Allow Scripts Component",
-  "body": "This component demonstrates custom JavaScript execution in your Adapt course.",
-  "instruction": "The custom script will execute automatically when this component loads, if enabled.",
+  "title": "Wistia Video Player",
+  "displayTitle": "Training Video",
+  "body": "Watch the video below:",
+  "instruction": "Use the video controls to play, pause, and adjust volume.",
   "_enableScript": true,
-  "_customScript": "console.log('Custom script is running from AllowScripts component!'); alert('Hello from AllowScripts!');"
+  "_videoUrl": "https://fast.wistia.net/embed/iframe/6owmamfdhq",
+  "_customScript": ""
 }

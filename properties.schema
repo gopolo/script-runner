@@ -37,16 +37,25 @@
       "title": "Enable Custom Script",
       "inputType": "Checkbox",
       "validators": [],
-      "help": "Enable or disable execution of the custom JavaScript code"
+      "help": "Enable or disable execution of the custom JavaScript code or video embedding"
+    },
+    "_videoUrl": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "title": "Video URL",
+      "inputType": "Text",
+      "validators": [],
+      "help": "Enter a video embed URL (Wistia, YouTube, Vimeo, etc.). If provided, this will be used instead of custom script."
     },
     "_customScript": {
       "type": "string",
-      "required": true,
+      "required": false,
       "default": "",
       "title": "Custom Script",
       "inputType": "TextArea",
       "validators": [],
-      "help": "Enter custom JavaScript code to execute when this component loads (only runs if enabled)"
+      "help": "Enter custom JavaScript code to execute when this component loads (only runs if enabled and no video URL is provided)"
     }
   }
 }

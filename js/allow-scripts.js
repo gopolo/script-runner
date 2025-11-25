@@ -25,9 +25,31 @@ define([
 
     executeCustomScript: function() {
       var enableScript = this.model.get('_enableScript');
+      var videoUrl = this.model.get('_videoUrl');
       var customScript = this.model.get('_customScript');
 
-      if (enableScript && customScript) {
+      // Handle video URL embedding first (simpler and more reliable)
+      if (enableScript && videoUrl) {
+        try {
+          var container = this.$('.allow-scripts__body');
+          var iframe = $('<iframe></iframe>')
+            .attr('src', videoUrl)
+            .attr('width', '100%')
+            .attr('height', '360')
+            .attr('frameborder', '0')
+            .attr('allowfullscreen', true)
+            .css({
+              'display': 'block',
+              'margin': '0 auto'
+            });
+          
+          container.append(iframe);
+          this.$('.allow-scripts__status').text('Video loaded successfully.');
+        } catch (error) {
+          console.error('AllowScripts: Error loading video:', error);
+          this.$('.allow-scripts__status').text('Video error: ' + error.message);
+        }
+      } else if (enableScript && customScript) {
         try {
           // Create a new function from the custom script string
           // This provides a safer execution context than eval()
