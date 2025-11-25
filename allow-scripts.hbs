@@ -1,0 +1,35 @@
+<div class="component__inner allow-scripts__inner">
+
+  {{> component this}}
+
+  <div class="component__widget allow-scripts__widget">
+
+    <div class="allow-scripts__content">
+      
+      {{#if body}}
+        <div class="allow-scripts__body">
+          {{{body}}}
+        </div>
+      {{/if}}
+
+      <div class="allow-scripts__status-container">
+        <p class="allow-scripts__status">
+          {{#if _enableScript}}
+            Custom script enabled and running.
+          {{else}}
+            Custom script disabled.
+          {{/if}}
+        </p>
+      </div>
+
+      {{#if instruction}}
+        <div class="allow-scripts__instruction">
+          {{{instruction}}}
+        </div>
+      {{/if}}
+
+    </div>
+
+  </div>
+
+</div>
