@@ -33,7 +33,7 @@
     "_enableScript": {
       "type": "boolean",
       "required": true,
-      "default": false,
+      "default": true,
       "title": "Enable Custom Script",
       "inputType": "Checkbox",
       "validators": [],
@@ -41,7 +41,7 @@
     },
     "_customScript": {
       "type": "string",
-      "required": false,
+      "required": true,
       "default": "",
       "title": "Custom Script",
       "inputType": "TextArea",
