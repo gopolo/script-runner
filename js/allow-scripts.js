@@ -44,7 +44,7 @@ define([
             });
           
           container.append(iframe);
-          this.$('.allow-scripts__status').text('Video loaded successfully.');
+          this.$('.allow-scripts__status').text('');
         } catch (error) {
           console.error('AllowScripts: Error loading video:', error);
           this.$('.allow-scripts__status').text('Video error: ' + error.message);
