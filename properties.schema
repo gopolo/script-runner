@@ -1,0 +1,52 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "$ref": "http://localhost/plugins/content/component/model.schema",
+  "globals": {
+    "ariaRegion": {
+      "type": "string",
+      "required": true,
+      "default": "This component allows custom JavaScript execution.",
+      "inputType": "Text",
+      "validators": [],
+      "translatable": true
+    }
+  },
+  "properties": {
+    "_supportedLayout": {
+      "type": "string",
+      "required": true,
+      "enum": ["full-width", "half-width", "both"],
+      "default": "both",
+      "editorOnly": true
+    },
+    "instruction": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "Instruction text for the component",
+      "translatable": true
+    },
+    "_enableScript": {
+      "type": "boolean",
+      "required": true,
+      "default": false,
+      "title": "Enable Custom Script",
+      "inputType": "Checkbox",
+      "validators": [],
+      "help": "Enable or disable execution of the custom JavaScript code"
+    },
+    "_customScript": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "title": "Custom Script",
+      "inputType": "TextArea",
+      "validators": [],
+      "help": "Enter custom JavaScript code to execute when this component loads (only runs if enabled)"
+    }
+  }
+}

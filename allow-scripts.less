@@ -1,0 +1,42 @@
+.allow-scripts {
+  
+  &__inner {
+    // Component inner styles
+  }
+
+  &__widget {
+    padding: @component-padding;
+  }
+
+  &__content {
+    // Content area styles
+  }
+
+  &__body {
+    margin-bottom: @component-padding;
+    font-size: @body-text-font-size;
+    line-height: @body-text-line-height;
+  }
+
+  &__status-container {
+    background-color: @background-color-inverted;
+    border: 2px solid @foreground-color;
+    border-radius: @component-border-radius;
+    padding: @item-padding;
+    margin: @component-padding 0;
+  }
+
+  &__status {
+    margin: 0;
+    font-weight: bold;
+    color: @foreground-color-inverted;
+    text-align: center;
+  }
+
+  &__instruction {
+    margin-top: @component-padding;
+    font-size: @instruction-text-font-size;
+    font-style: italic;
+  }
+
+}
