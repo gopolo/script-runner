@@ -1,6 +1,6 @@
 {
   "name": "adapt-allow-scripts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "framework": ">=2.0.0",
   "homepage": "https://github.com/adaptlearning/adapt-allow-scripts",
   "displayName": "Wistia Video Authoring",
